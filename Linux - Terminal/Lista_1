@@ -1,0 +1,107 @@
+Repositório para ex. da disciplina de Sistemas Operacionais
+
+Ex 01.
+
+echo "Mateus Walz"
+
+Ex 02.
+
+echo "Mateus Walz" > cliente.txt
+
+Ex 03.
+
+echo "Jaraguá do Sul" >  cliente_.txt
+
+Ex 04.
+
+mkdir Clientes
+ls
+
+Ex 05.
+
+mv cliente.txt Clientes
+
+Ex 06.
+
+cp cliente.txt cliente.txt_bkp
+
+Ex 07.
+
+rm cliente.txt
+
+Ex 08. e Ex 09.
+
+vi Cliente.sh *obs:. Criado com .sh para tornar arquivo executável, .script estava dando erro.
+
+echo "Mateus Walz"
+echo "Mateus Walz" > cliente.txt
+echo "jaraguá do Sul" >  cliente.txt
+mkdir clientes
+mv cliente.txt Cliente
+cd Cliente
+cp cliente.txt cliente.txt_bkp
+rm cliente.txt
+:wq
+chmod -x Cliente.sh
+sh Cliente.sh
+
+Ex. 10
+
+comando cal
+ 
+Apresenta calendário do mês corrente com a data de hoje sombreadp
+
+echo|cal > hoje.txt * Comando desmarcou no calendário o dia de hoje, retirabdndo o sombreado. O Comando pipe serve para juntar comandos e filtrar a saída. Neste caso  o comando echo foi juntado com o comando que é para excluir, gerando um novo arquivo hoje.txt 
+
+Ex 11. e Ex 12.
+
+Efetuado download do arquivo cidades_sc.txt conforme informado no exercício
+
+comando grep Balneario cidades sc.txt
+
+apresentou o resultado da busca por cidades que possuem Balneario no nome:
+
+Balneario Arroio do Silva;
+Balneario Barra do Sul;
+Balneario Camboriu;
+Balneario Gaivota;
+
+Ex. 13.
+
+Executando o comando grep balneario cidades_sc.txt não retornou nenhuma cidade pois o "b" é minúsculo e o programa é case sensitive.
+
+Ex. 14.
+
+Ao executar o comando grep "do Sul" cidades_sc.txt não retornou nenhuma cidade pois não deve-se usar aspas para esta procura.
+
+Ao executar grep do sul cidades_sc.txt o programa mostra todas as cidades que possuem "do" e/ou "sul" no nome
+
+Ex: Abelardo Luz; Balneario Barra do Sul; Ponte Alta do Norte;
+
+Ex 15.
+
+utilizando o comando cat cidades_sc.txt | grep Balneario
+
+Mostrou as cidades: Balneario Arroio do Silva; Balneario Barra do Sul; Balneario Camboriu; Balneario Gaivota;
+
+Ex 16.
+
+vi Balneario.txt
+i > Balneario Barra do Sul
+    Balneario Camboriu
+    Balneario Gaivota
+:wq
+
+Ex 17.
+
+utilizado gzip Balneario.txt pois o comando tar estava dando erro. 
+
+criado arquivo Balneario.txt.gz e renomeado para Balneario.txt.gz
+
+Ex 18.
+
+Descompactado o arquivo com gzip -d compactado.gz
+
+extraido o conteudo para arquivo 'compactado'
+
+renomeado para compactado.txt
