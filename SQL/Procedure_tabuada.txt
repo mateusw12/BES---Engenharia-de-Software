@@ -1,0 +1,28 @@
+
+CREATE TABLE tabuada (
+  Numero int,
+  multiplicador int,
+  resultado int
+)
+
+CREATE PROCEDURE uspRetornaTabuada  
+@Numero int
+AS
+
+DECLARE @contador INT
+SET @contador = 1
+WHILE @contador <= 10
+BEGIN
+  
+  INSERT tabuada (Numero,multiplicador,resultado) VALUES (@Numero,@contador,5*@contador);
+  SET @contador = @contador + 1
+
+
+END
+
+exec uspRetornaTabuada 1; -- Executa Procidure 
+
+
+
+SELECT * FROM  tabuada   -- select para ver se deu certo
+DROP TABLE tabuada       -- para apagar tabela 
